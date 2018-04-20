@@ -1,0 +1,28 @@
+#content{
+    position: relative;
+}
+.img_logo{
+    height: 20vw;
+    width: 60vw;
+    margin: 25.3333vw auto 11.6vw;
+}
+.img_android{
+    width: 100%;
+    height: 18.4vw;
+}
+.img_iphone{
+    width: 100%;
+    height: 21.4666vw;
+}
+.img_iphone img,.img_banner img,.img_android img{
+    width: 100%;
+    height: 100%;
+}
+.img_logo img{
+    height: 100%;
+    display: block;
+}
+.img_banner{
+    height: 85.333vw;
+    width: 100%;
+}

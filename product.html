@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./resources/yredtbao//common/css/common.css">
+    <link rel="stylesheet" href="./resources/yredtbao/css/product.css">
+</head>
+
+<body>
+    <div id="content2">
+        <div class="more" id="more" style="z-index: 1111;">点击加载更多</div>
+        <div class="more refsh" id="refsh" style="top:14vw">下拉刷新</div>
+        <div class="condition">
+            <ul class="clearfloat">
+                <li class="fl lis con_time" data-name="1">
+                    <span>时效</span>
+                    <i class="sea"></i>
+                    <font class="sea"></font>
+                </li>
+                <li class="fl lis con_date" data-name="2">
+                    <span>期限</span>
+                    <i class="sea"></i>
+                    <font class="sea"></font>
+                </li>
+                <li class="fl lis con_money" data-name="3">
+                    <span>费用</span>
+                    <i class="sea"></i>
+                    <font class="sea"></font>
+                </li>
+                <li class="fl con_screen">
+                    <span>筛选</span>
+                    <img src="./resources/yredtbao/images/screen_img.png">
+                </li>
+            </ul>
+        </div>
+        <div class="box img-box" style="position:relative">
+            <!-- <div class="product">
+                <div class="product_top clearfloat">
+                    <div class="pro_left fl">
+                        <img src="./resources/yredtbao/images/product_img.png" alt="平安普惠">
+                    </div>
+                    <div class="pro_center fl">
+                        <p class="p_center_f1">
+                            <span class="p_center_name">普惠贷款</span>
+                        </p>
+                        <p class="p_center_f3">适合人群：上班族，企业主，网店主</p>
+                        <p class="p_center_f3">月费用：0.12%起</p>
+                    </div>
+                    <div class="pro_right fl">
+                        <p class="p_right_f1">50万</p>
+                        <p class="p_right_f3">最高额度</p>
+                    </div>
+                </div>
+                <ul class="product_center">
+                    <li>
+                        <p>最快
+                            <span>24</span>小时</p>
+                        <p>放款时间</p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>0~36</span>小时</p>
+                        <p>期限范围</p>
+                    </li>
+                    <li>
+                        <p>
+                            <span>0~20</span>万</p>
+                        <p>额度</p>
+                    </li>
+                </ul>
+                <div class="product_bottom">
+                    22~60周岁，微粒贷用户专享。
+                </div>
+            </div> -->
+        </div>
+        <!-- 隐藏页 -->
+        <div id="content3" class="hide">
+            <div class="filtra">
+                <p class="boy">人群</p>
+                <ul class="filtra_select crowd clearfloat">
+                    <li data-crowd="0">所有人群</li>
+                    <li data-crowd="1">上班族</li>
+                    <li data-crowd="2">企业主</li>
+                    <li data-crowd="3">网店主</li>
+                </ul>
+            </div>
+            <div class="filtra">
+                <p>借贷金额</p>
+                <ul class="filtra_select money clearfloat">
+                    <li data-money="0">全部金额</li>
+                    <li data-money="0|1000">1000以下</li>
+                    <li data-money="1000|5000">1000-5000</li>
+                    <li data-money="5000|10000">5000-10000</li>
+                    <li data-money="10000|-1">10000以上</li>
+                </ul>
+            </div>
+            <div class="filtra">
+                <p>借款期限</p>
+                <ul class="filtra_select time clearfloat">
+                    <li data-time="0">全部期限</li>
+                    <li data-time="0|30">一个月以下</li>
+                    <li data-time="30|90个月">1-3个月</li>
+                    <li data-time="90|180个月">3-6个月</li>
+                    <li data-time="180|360">6-12个月</li>
+                    <li data-time="360|-1">一年以上</li>
+                </ul>
+            </div>
+            <div class="filtra">
+                <p>有无芝麻分</p>
+                <ul class="filtra_select sesame clearfloat">
+                    <li data-sesame="1">有</li>
+                    <li data-sesame="0">没有</li>
+                </ul>
+            </div>
+            <div class="filtra">
+                <p>有无电商账号</p>
+                <ul class="filtra_select inter clearfloat">
+                    <li data-inter="1">有</li>
+                    <li data-inter="0">没有</li>
+                </ul>
+            </div>
+            <div class="filtra">
+                <p>有无征信报告</p>
+                <ul class="filtra_select credit clearfloat">
+                    <li data-credit="1">有</li>
+                    <li data-credit="0">没有</li>
+                </ul>
+            </div>
+            <div class="submit">
+                <div class="submit_box clearfloat">
+                    <button class="reset">重置</button>
+                    <button class="confirm">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./resources/yredtbao/common/js/jquery.min.js"></script>
+<script src="./resources/yredtbao/common/js/common.js"></script>
+<script src="./resources/yredtbao/js/product.js"></script>
+
+</html>

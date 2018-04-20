@@ -1,0 +1,13 @@
+#content{
+    margin: 0 6.666vw 0 6.666vw;
+    padding-top: 5.8666vw;
+    width: auto;
+    height: auto;
+}
+p{
+    color: #333333;
+    font-size: 3.7333vw; 
+}
+.versions p:last-child{
+    color: #419cef;
+}

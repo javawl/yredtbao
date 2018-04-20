@@ -1,0 +1,107 @@
+#content{
+    position: relative;
+}
+.title_text{
+    width: 100%;
+    height: 8.1333vw;
+    font-size: 2.9333vw;
+    background-color: #fff0f0;
+    color: #dc2828;
+    line-height: 8.13333vw;
+    text-align: center;
+}
+.logo{
+    width: 20.2666vw;
+    height: 20.26666vw;
+    margin: 6.13333vw auto 18.2666vw;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.box{
+    width: 92vw;
+    margin: 0 auto;
+}
+.box_inp{
+    margin: 13.333vw 2.666vw 0;
+}
+.inp{
+    padding-bottom: 2.8vw;
+    border-bottom: 1px solid #eeeeee; 
+    margin-bottom: 4.666vw;
+}
+.img_logo{
+    width: 4.666vw;
+    height: 5.7333vw;
+    padding: 0.5vw 9.333vw 0 4vw;
+}
+.img_logo img{
+    width: 100%;
+    height: 100%;
+}
+.inp_text{
+    width: 60vw;
+    height: 5.7333vw;
+}
+.inp_text input{
+    width: 100%;
+    height: 100%;
+    font-size: 3.7333vw;
+    /* color: #aaa; */
+    border: none;
+    outline: none;
+}
+.inp .inp_text{
+    width: 40vw;
+}
+.button_box{
+    width: 100%;
+    height: 10.6666vw;
+    font-size: 4.5333vw;
+    background-color: #419cef;
+    color: #fff;
+    text-align: center;
+    line-height: 10.6666vw;
+    border-radius: 1.06666vw;
+    margin-top: 13.333vw ;
+}
+.forget{
+    font-size: 3.73333vw;
+    color: #419cef;
+    margin-top: 3.7vw;
+}
+.footer-wrap{
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 8.6666vw;
+    left: 50%;
+    width: 21.5333vw;
+    height: 7.4666vw;
+    line-height: 7.4666vw;
+    font-size: 3.7333vw;
+    color: #419cef;
+    text-align: center;
+    border-radius: 1.06666vw;
+    margin-top: 13.333vw;
+    border: solid 1px #419cef;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.login{
+    /* padding: 1.8666vw 0;
+    position: fixed;
+    bottom: 8.6666vw;
+    left: 50%;
+    margin: 0 auto;
+    width: 21.5333vw;
+    line-height: 3.7333vw;
+    font-size: 3.7333vw;
+    text-align: center;
+    border-radius: 1.06666vw;
+    border: solid 1px #419cef;
+    color: #419cef; */
+}

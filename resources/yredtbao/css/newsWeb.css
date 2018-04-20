@@ -1,0 +1,54 @@
+#content{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.con_box{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 5.333vw;
+    border-bottom: 0.2666vw solid #eee;
+}
+.imgBox>p{
+    width: 5.8666vw;
+    height: 5.8666vw;
+    margin: 4vw 9.8666vw 0 8.6666vw;
+    background: url('../images/message.png') no-repeat;
+    background-size: 100% 100%;   
+}
+.red{
+    width: 6.8666vw;
+    height: 6.8666vw;
+    display: block;
+    background: url(../images/point.png) no-repeat;
+    background-size: 100% 100%                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+    background-position: 1.8vw -2.7vw;  
+}
+.text_box{
+    width: 70vw;
+}
+.text_title{
+    width: 100%;
+	font-size: 3.7333vw;
+    color: #333333;
+    padding: 4vw 0 2.4vw 0;
+}
+.date{
+    display: inline-block;
+    float: right;   
+    color: #aaaaaa;
+    font-size: 3.2vw;
+}
+.con_text{
+    width: 67.0666vw;
+	font-size: 3.2vw;
+	line-height: 4.666vw;
+	color: #aaaaaa;
+}
+.as{
+    height: 42.8666vw;
+    text-align: center;
+    line-height: 42.8666vw;
+    font-size: 5vw;
+    margin: 50% auto;
+}

@@ -1,0 +1,75 @@
+.banner{
+    width: 100%;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.box{
+    width: 92vw;
+    margin: 0 auto;
+}
+.box_inp{
+    margin: 13.333vw 2.666vw 0;
+}
+.inp{
+    padding-bottom: 2.8vw;
+    border-bottom: 1px solid #eeeeee; 
+    margin-bottom: 4.666vw;
+}
+.img_logo{
+    width: 4.666vw;
+    height: 5.7333vw;
+    padding: 0.5vw 9.333vw 0 4vw;
+}
+.img_logo img{
+    width: 100%;
+    height: 100%;
+}
+.inp_text{
+    width: 60vw;
+    height: 5.7333vw;
+}
+.inp_text input{
+    width: 100%;
+    height: 100%;
+    font-size: 3.7333vw;
+    /* color: #aaa; */
+    border: none;
+    outline: none;
+}
+.inp .inp_text{
+    width: 40vw;
+}
+.els{
+    height: 7.4666vw;
+}
+.inp .key_img{
+    margin-top: 1vw;
+}
+.button_box{
+    width: 100%;
+    height: 10.6666vw;
+    font-size: 4.5333vw;
+    background-color: #419cef;
+    color: #fff;
+    text-align: center;
+    line-height: 10.6666vw;
+    border-radius: 1.06666vw;
+    margin-top: 13.333vw ;
+}
+#content .box .box_inp .inp .getvali {
+    width: 21.3333vw;
+    height: 7.4666vw;
+}
+#content .box .box_inp .inp .getvali .but{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #419cef;
+    color: #419cef;
+    border-radius: 1.06666vw;
+    font-size: 3.46666vw;
+}

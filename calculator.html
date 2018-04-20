@@ -1,0 +1,105 @@
+</html>
+<html lang="en">
+
+<head>
+    <title>予人福利社</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="Pragma">
+    <meta content="0" http-equiv="Expires">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="./resources/yredtbao/common/css/verification.css">
+    <link rel="stylesheet" type="text/css" href="./resources/yredtbao/css/calculator.css">
+</head>
+
+<body>
+    <article class="content">
+        <article class="box_r">
+            <header class="v_head">
+                <h3 class="v_head_tab">
+                    个人贷款计算器
+                </h3>
+            </header>
+            <article style="padding-bottom: 5px; background: #f4f4f4"></article>
+        </article>
+        <article style="height: 60px;"></article>
+
+        <form name="estateborrow">
+            <div class="ct_thisbox">
+                <div class="ct_centop">
+                    <!--贷款计算器开始-->
+                    <ul class="ct_cpulul clear">
+                        <li class="p1">贷款总额:</li>
+                        <li class="p2">
+                            <input class="border" name="original" maxlength="16" type="text">
+                        </li>
+                        <i>元</i>
+                    </ul>
+                    <ul class="ct_cpulul clear">
+                        <li class="p1">贷款期限:</li>
+                        <li class="p2">
+                            <input name="yearSpan" maxlength="8" class="border" type="text">
+                        </li>
+                        <i>年</i>
+                    </ul>
+                    <ul class="ct_cpulul clear">
+                        <li class="p1">还款方式:</li>
+                        <li class="p2" style="float: right; width: 120px;">
+                            <select name="inputSelect">
+                                <option value="等额本息还款">等额本息还款</option>
+                                <option value="等额本金还款">等额本金还款</option>
+                            </select>
+                        </li>
+                        <i style="top: 10px;">
+                            <img src="./resources/yredtbao/images/ic_right.png" width="">
+                        </i>
+                    </ul>
+                    <ul class="ct_cpulul clear">
+                        <li class="p1">年利率:</li>
+                        <li class="p2">
+                            <input name="active" class="border" type="text">
+                        </li>
+                        <i>%</i>
+                    </ul>
+                    <div class="ct_cetpbutm">
+                        <ul>
+                            <li class="ct_cetpbutma">
+                                <div onclick="javascript:sendrate2()" class="s_btn">开始计算</div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="ct_cpjs ct_cpjss">计算结果:</div>
+                    <div class="">
+                        <ul class="ct_cpulul clear" id="monthBackDiv">
+                            <li class="p1">月均还款:</li>
+                            <li class="p2">
+                                <input name="monthBack" class="border" readonly="" type="text">
+                            </li>
+                            <i>元</i>
+                        </ul>
+                        <ul class="ct_cpulul clear">
+                            <li class="p1">支付利息:</li>
+                            <li class="p2">
+                                <input name="totalInterest" class="border" readonly="" type="text">
+                            </li>
+                            <i>元</i>
+                        </ul>
+                        <ul class="ct_cpulul clear">
+                            <li class="p1">还款总额:</li>
+                            <li class="p2">
+                                <input name="totalBack" class="border" readonly="" type="text">
+                            </li>
+                            <i>元</i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </article>
+</body>
+<script type="text/javascript" src="./resources/yredtbao/common/js/jquery.min.js"> </script>
+<script type="text/javascript" src="./resources/yredtbao/common/js/t_cal.js"> </script>
+<script type="text/javascript" src="./resources/yredtbao/common/js/cal_rate.js"> </script>
+<script type="text/javascript" src="./resources/yredtbao/common/js/checkData.js"> </script>
+</html>

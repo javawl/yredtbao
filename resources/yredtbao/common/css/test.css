@@ -1,0 +1,119 @@
+.gv_cot {
+    width: 172px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    color: #444;
+}
+
+.gvrp_xz {
+    background: url("../img/wap_w.png") no-repeat left center;
+    background-size: 18px;
+    padding: 10px 0 10px 30px;
+}
+
+.gvrp_xz.active {
+    background: url("../img/wap_x.png") no-repeat left center;
+    background-size: 18px;
+}
+
+.gv_list {
+    text-decoration: underline;
+}
+
+.gvrp_box {
+    padding: 0 10px 20px 10px;
+    background: #fff;
+}
+
+.f_tit {
+    font-size: 14px;
+    color: #444444;
+    text-align: center;
+    line-height: 45px;
+}
+
+.gv_t {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444444;
+    line-height: 25px;
+}
+
+.gv_p {
+    color: #666666;
+    font-size: 12px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.gb {
+    background: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.h40 {
+    height: 40px;
+}
+
+.gv_cont {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    margin: 0 5px;
+}
+
+.gvrp_box strong {
+    font-weight: bold;
+}
+
+@media (min-width: 960px) {
+    .gvrp_box {
+        height: 3000px;
+    }
+}
+
+.v_head {
+    height: 2.3rem;
+    line-height: 2.3rem;
+    width: 100%;
+    border-top: 1px solid #e4e4e4;
+}
+
+.v_head h3 {
+    font-size: 20px;
+    color: #444;
+}
+
+.v_head h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.v_head_tab img {
+    position: absolute;
+    margin: 0;
+    left: 10px;
+    top: 5px;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: block;
+}
+
+.v_head_tab {
+    position: relative;
+}
+
+
+.my_info {
+    margin: 30px;
+}
+
+.my_info p {
+    text-align: center;
+    font: normal 12px/30px 'MicroSoft YaHei';
+}
