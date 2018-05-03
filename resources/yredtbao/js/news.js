@@ -14,26 +14,12 @@ $(function () {
         return params;
     }
     ps = getUrlkey(url);
-    // alert(JSON.stringify(ps))
     var phone = ps.phone,
         tag = ps.tag,
+        redArrStr = ps.red,
         pageSize = 10,
-        city = ps.city;
-    // function isLogin() {
-    //     var tag,
-    //         loginStatus;
-    //     loginStatus = webAppInterface.isLogin();
-    //     // alert(loginStatus)
-    //     if (loginStatus != "false") {
-    //        var obj = JSON.parse(loginStatus);
-    //         phone = obj.phone;
-    //         // alert(obj)
-    //     } else {
-    //         tag = webAppInterface.getTag()
-    //     }
-    // }
-
-    getelement()
+        city = decodeURI(ps.city),
+        ArrStr = redArrStr.split('.');   
     function getelement() {
         var str = "";
         $.ajax({
@@ -48,14 +34,13 @@ $(function () {
             dataType: 'json',
             success: function (data) {
                 var dataArray = data.data;
-                console.log(dataArray)
                 if (dataArray == undefined || dataArray == ""){
                     $('#content').html('<div class="as"><p>目前暂无消息</p></div>')
                     return;
                 }
                 for (var i = 0; i < dataArray.length; i++) {
                     str = '<div class="con_box">'+
-                        '<div name="' + dataArray[i].id+'" class="clearfloat imgBox news' + i + '">' +
+                        '<div name="' + dataArray[i].id + '" tt="' + dataArray[i].msgTp +'" class="clearfloat imgBox news' + i + '">' +
                         '<p class="fl f1">' +
                         '<span  class=""></span>' +
                         '</p>' +
@@ -68,19 +53,36 @@ $(function () {
                         '</div>' +
                         '</div>' +
                         '</div>'
+                    
                     $('#content').append(str);
-                    if (dataArray[i].sta == 1) {
-                        $('.news' + i + ' .f1').find("span").addClass('red')
-                        $('.news' + i).click(function () {
-                            var a = webAppInterface.msgHasRead($(this).attr('name'), 'N');
-                            $(this).find('.f1').find('span').removeClass('red')
-                            $(this).unbind();
-                        })
-                    } else {
-                        $(this).find('.f1').find('span').removeClass('red')
+                    for (var j = 0; j < ArrStr.length; j++){
+                        if (dataArray[i].id == ArrStr[j]){
+                            $('.news' + i + ' .f1').find("span").addClass('red')
+                            $('.news' + i).click(function () {
+                                var tp = 'Y';
+                                if ($(this).attr('tt') == '9' || $(this).attr('tt') == '0'){
+                                    tp = 'N'
+                                }
+                                var a = webAppInterface.msgHasRead($(this).attr('name'), tp);
+                                $(this).find('.f1').find('span').removeClass('red')
+                                $(this).unbind();
+                            })
+                            break;
+                        }
                     }
+                    // if (dataArray[i].sta == 1) {
+                    //     $('.news' + i + ' .f1').find("span").addClass('red')
+                    //     $('.news' + i).click(function () {
+                    //         var a = webAppInterface.msgHasRead($(this).attr('name'), 'N');
+                    //         $(this).find('.f1').find('span').removeClass('red')
+                    //         $(this).unbind();
+                    //     })
+                    // } else {
+                    //     $(this).find('.f1').find('span').removeClass('red')
+                    // }
                 }
             }
         })
     }
+    getelement()
 })

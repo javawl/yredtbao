@@ -1,0 +1,75 @@
+.tab_product{
+    width: 53.333vw;
+    /* height: 5.333vw;
+    line-height: 5.333vw; */
+    text-align: center;
+    background-color: #e9e9e9;
+	border-radius: 2.666vw;
+    border: solid 1px #d5d5d5;
+    margin: 3.333vw auto;
+    box-sizing: border-box;
+}
+.tab_product .wholesale,.tab_product .dribblet{
+    height: 100%;
+    width: 50%;
+    font-size: 3.7333vw;
+    line-height: 3.7333vw;
+    padding: 0.9333vw 0;
+    border-radius: 2.666vw;
+}
+.width{
+    width: 92vw;
+    margin: 0 auto;
+}
+.active{
+    background: #419cef;
+    color: #fff;
+}
+.list_product{
+    width: 100%;
+}
+.box{
+    display: flex;
+    width: 92vw;
+	background-color: #ffffff;
+	border-radius: 1.0666vw;
+    border: solid 1px #dddddd;
+    box-shadow: 0px 0.5333vw 0px #ddd;
+    margin: 0 auto 2.666vw;
+}
+.list_product .list_left{
+    flex: 1;
+}
+.list_product .list_left .logo{
+    width: 10.666vw;
+    height: 10.666vw;
+    padding: 3.8666vw 2.6666vw 0 3.8666vw;
+}
+.list_product .list_right{
+    flex: 1;
+    margin: 3.7333vw 0;
+    border-left: 1px solid #eeeeee;
+    padding-left: 4.2666vw
+}
+.list_product .list_right p{
+	font-size: 3.2vw;
+	line-height: 3.2vw;
+    color: #aaaaaa;
+    padding-bottom: 1.3vw;
+}
+.list_product .list_left .logo img{
+    width: 100%;
+    height: 100%;
+}
+.list_product .list_left .name{
+    line-height: 3.2vw;
+	font-size: 3.2vw;
+    color: #333333;
+    padding: 4.9333vw 0 1.6vw 0;
+}
+.list_product .list_left .money{
+    line-height: 4.8vw;
+	font-size: 4.8vw;
+	line-height: 5.7333vw;
+	color: #f64e4e;
+}

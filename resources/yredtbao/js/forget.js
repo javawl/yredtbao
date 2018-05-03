@@ -7,24 +7,6 @@ $(function () {
         temp,
         password_1;
 
-    // 验证码接口
-    $('.but').click(function () {
-        phone = $('#phone').val();
-        // 手机
-        if (Validator.tel(phone) != false) {
-           var a = webAppInterface.getKaptchCd(phone,2)
-            if(a == '000000'){
-                settime(this);
-                $('.model').css('display', 'block');
-                $('.model .text_notice').text('验证码已发送')
-                modelYn()
-            }else{
-                $('.model').css('display', 'block');
-                $('.model .text_notice').text(a)
-                modelYn()
-            }
-        }
-    })
     // 重置密码
     $('.button_box').click(function () {
         phone = $('#phone').val();
@@ -36,8 +18,10 @@ $(function () {
             return false;
         }
         temp = webAppInterface.forgetPasswd(phone, password, password_1, valiWid)
-        $('.model').css('display', 'block');
-        $('.model .text_notice').text('重置密码成功')
-        modelYn()
+        setTimeout(function () {
+            $('.model').css('display', 'block');
+            $('.model .text_notice').text('重置密码成功')
+            modelYn()
+        }, 350);
     })
 })

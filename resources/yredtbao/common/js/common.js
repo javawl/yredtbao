@@ -7,6 +7,24 @@ function modelYn(text) {
         $('.model').fadeOut()      
     }, 1000)
 }
+// 验证码接口
+$('.but').click(function () {
+    phone = $('#phone').val();
+    // 手机
+    if (Validator.tel(phone) != false) {
+        var a = webAppInterface.getKaptchCd(phone, 1)
+        if (a == '000000') {
+            settime(this);
+            $('.model').css('display', 'block');
+            $('.model .text_notice').text('验证码已发送')
+            modelYn()
+        } else {
+            $('.model').css('display', 'block');
+            $('.model .text_notice').text(a)
+            modelYn()
+        }
+    }
+})
 var Validator = {
     name: function (name) {
 
@@ -23,7 +41,7 @@ var Validator = {
                 $('.model .text_notice').text('请输入您的姓名');
                 modelYn();
                 return false;
-            } 
+            }
             // else if (name == "不详" || name == "不祥" || name == "未知" || name == "不知道" || name.indexOf("姓名") > -1 || name.indexOf("测试") > -1 || name.indexOf("test") > -1) {
             //     $('.model').fadeIn();
             //     $('.model .text_notice').text('姓名不符合规范！');
@@ -87,41 +105,53 @@ function validata(username, phone, valiWid, password, password_1) {
     }
     // 验证码
     if (valiWid == "" || valiWid == null) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('请输入您的验证码');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('请输入您的验证码');
+            modelYn();
+            return false;
+        }, 350);
     }
     // 密码
     if (password == "" || password == null) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('请输入新密码');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('请输入新密码');
+            modelYn();
+            return false;
+        }, 350);
     } else if (!reg.test(password)) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('您输入的密码格式错误');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('您输入的密码格式错误');
+            modelYn();
+            return false;
+        }, 350);
     }
 
     if (password_1 == "" || password_1 == null) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('请再次输入新密码');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('请再次输入新密码');
+            modelYn();
+            return false;
+        }, 350);
     } else if (!reg.test(password_1)) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('您输入的密码格式错误');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('您输入的密码格式错误');
+            modelYn();
+            return false;
+        }, 350);
     }
 
     if (password != password_1) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('您输入的密码不一致');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('您输入的密码不一致');
+            modelYn();
+            return false;
+        }, 350);
     }else{
         return true;
     }
@@ -134,41 +164,53 @@ function validata_1( phone, valiWid, password, password_1) {
     } 
     // 验证码
     if (valiWid == "" || valiWid == null) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('请输入您的验证码');
-        modelYn();
-        return false;
+        setTimeout(function() {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('请输入您的验证码');
+            modelYn();
+            return false;
+        }, 350);
     }
     // 密码
     if (password == "" || password == null) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('请输入新密码');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('请输入新密码');
+            modelYn();
+            return false;
+        }, 350);
     } else if (!reg.test(password)) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('您输入的密码格式错误');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('您输入的密码格式错误');
+            modelYn();
+            return false;
+        }, 350);
     }
 
     if (password_1 == "" || password_1 == null) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('请再次输入新密码');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('请再次输入新密码');
+            modelYn();
+            return false;
+        }, 350);
     } else if (!reg.test(password_1)) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('您输入的密码格式错误');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('您输入的密码格式错误');
+            modelYn();
+            return false;
+        }, 350);
     }
 
     if (password != password_1) {
-        $('.model').fadeIn();
-        $('.model .text_notice').text('您输入的密码不一致');
-        modelYn();
-        return false;
+        setTimeout(function () {
+            $('.model').fadeIn();
+            $('.model .text_notice').text('您输入的密码不一致');
+            modelYn();
+            return false;
+        }, 350);
     }else{
         return true;
     }

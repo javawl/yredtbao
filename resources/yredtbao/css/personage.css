@@ -1,3 +1,6 @@
+#content{
+    position: relative;
+}
 .banner{
     width: 100%;
     padding-bottom: 4.26666vw;
@@ -25,7 +28,7 @@
 #content .box .box_text{
     padding: 0.8vw 3.333vw 0.8vw 0; 
 }
-.img_logo img{
+.img_logo img, .more img{
     height: 100%;
     width: 100%;
 }
@@ -37,4 +40,47 @@
 }
 .dl{
     margin-right: 2vw;
+}
+#content .box .more{
+    width: 5.0666vw;
+    height: 5.0666vw;
+    margin-right: 3.7333vw;
+    padding-right: 0;
+}
+.isOk{
+    width: 75%; 
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -9.783333vw;
+    display: none;
+}
+.isOk .text{
+    width: 100%;
+    color: #000;
+    font-size: 3.7333vw;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    height: 18vw;
+    line-height: 18vw;
+}
+.isOk .buttom{
+    display: flex;
+    height: 10vw;
+    line-height: 10vw;
+}
+.isOk .buttom .cancel{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #eee;
+    color: #419cef;
+}
+.isOk .buttom .confirm{
+    flex: 1;
+    text-align: center;
+    color: #419cef;
 }

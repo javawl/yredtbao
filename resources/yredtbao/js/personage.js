@@ -10,17 +10,26 @@ $(function(){
             var obj = JSON.parse(loginStatus);
             $('.center').text(obj.name);
             $('.dl').hide();
-            $('.zc').text('退出登录').addClass('off');
-            $('.off').removeClass('zc')
+            $('.zc').hide();
+            $('.off').show();
         }
     }
     // 退出登录
     $('.off').click(function name() {
+        $('.isOk').show();
+    })
+    // 取消
+    $('.buttom').on('click', '.cancel', function () {
+        $('.isOk').hide();
+    })
+    // 确定
+    $('.buttom').on('click', '.confirm', function () {
         webAppInterface.logout()
         $('.center').text('个人中心');
         $('.dl').show();
-        $('.off').addClass('zc');
-        $('.zc').text('注册').removeClass('off');
+        $('.zc').show();
+        $('.off').hide();
+        $('.isOk').hide();
     })
     $('.dl').click(function(){
         webAppInterface.toGuidPage(pageUrl +'login.html','登录')
@@ -29,11 +38,15 @@ $(function(){
         webAppInterface.toGuidPage(pageUrl +'register.html','新用户注册')
     })
     $('.share').click(function () {
-        webAppInterface.share();
+        webAppInterface.share('1');
     })
     // 版权声明
     $('.versions').click(function () {
         webAppInterface.toGuidPage1(pageUrl + 'versions.html', '版权声明')
+    })
+    // 予人帮
+    $('.commonSense').click(function () {
+        webAppInterface.toGuidPage1(pageUrl + 'commonSense.html', '予人帮')
     })
     // 关于我们
     $('.aboutUs').click(function () {

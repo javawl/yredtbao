@@ -72,7 +72,7 @@
     margin-top: 3.7vw;
 }
 .footer-wrap{
-    position: fixed;
+    /* position: fixed;
     box-sizing: border-box;
     bottom: 8.6666vw;
     left: 50%;
@@ -89,19 +89,18 @@
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    -o-transform: translateX(-50%); */
 }
 .login{
-    /* padding: 1.8666vw 0;
+    width: 25.3333vw;
+    height: 7.4666vw;
+    text-align: center;
+    line-height: 7.46666vw;
+    border-radius: 1.06666vw;
+    border: solid 1px #419cef;
+    color: #419cef;
     position: fixed;
     bottom: 8.6666vw;
     left: 50%;
     margin: 0 auto;
-    width: 21.5333vw;
-    line-height: 3.7333vw;
-    font-size: 3.7333vw;
-    text-align: center;
-    border-radius: 1.06666vw;
-    border: solid 1px #419cef;
-    color: #419cef; */
 }

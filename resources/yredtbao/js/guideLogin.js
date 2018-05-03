@@ -1,19 +1,4 @@
 $(function(){
-    // var isTrue = true;
-    // getLocal()
-    // function getLocal(){
-    //     var obj = localStorage.getItem('temp');
-    //     console.log(obj)
-    //     if (obj.length != 0) {
-    //         $('.validata_box').css('display', 'none');
-    //         $('#phone').val(obj.phone)
-    //         isTrue = true;
-    //         // 验证码
-    //     } else {
-    //         isTrue = false;
-    //     }
-    // }
-
     var phone,
         valiWid,
         username;
@@ -31,24 +16,6 @@ $(function(){
         }
     }
 
-    // 验证码接口
-    $('.but').click(function () {
-        phone = $('#phone').val();
-        // 手机
-        if (Validator.tel(phone) != false) {
-            var a = webAppInterface.getKaptchCd(phone,1)
-            if(a == '000000'){
-                settime(this);
-                $('.model').css('display', 'block');
-                $('.model .text_notice').text('验证码已发送')
-                modelYn()
-            }else{
-                $('.model').css('display', 'block');
-                $('.model .text_notice').text(a)
-                modelYn()
-            }
-        }
-    })
     // 下一步
     $('.button_box').click(function(){
         var temp = '000000';

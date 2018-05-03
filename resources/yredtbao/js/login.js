@@ -25,18 +25,18 @@ $(function () {
         }
         // 登入接口
         var obj = webAppInterface.login(phone, password);
-        if (obj != 'false'){
-            $('.model').fadeIn();
-            $('.model .text_notice').text('登录成功');
-            modelYn();
-            // setTimeout(function name() {
-                // webAppInterface.toGuidPage('https://m.baidu.com', '详情')
-            // },500)
-        }else{
-            $('.model').fadeIn();
-            $('.model .text_notice').text('您输入的密码或账号错误');
-            modelYn();
-            return false;
+        if (obj.slice(0,1) != '{'){
+            if (obj == 'false'){
+                $('.model').fadeIn();
+                $('.model .text_notice').text('用户名或密码错误');
+                modelYn();
+                return false;
+            }else{
+                $('.model').fadeIn();
+                $('.model .text_notice').text(obj);
+                modelYn();
+                return false;
+            } 
         }
     })
     // 注册按钮

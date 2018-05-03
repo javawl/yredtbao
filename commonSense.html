@@ -3,13 +3,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>mui选项卡切换和下拉刷新加载数据列表代码</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link rel="stylesheet" href="./resources/yredtbao/common/css/mui.min.css">
-	<link rel="stylesheet" href="./resources/yredtbao/common/css/common.css">
-	<link rel="stylesheet" href="./resources/yredtbao/css/indexnxt.css">
+	<link rel="stylesheet" href="./resources/yredtbao/css/commonSense.css">
 </head>
 
 <body>
@@ -17,8 +16,19 @@
 		<div id="slider" class="mui-slider mui-fullscreen">
 			<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
 				<div class="mui-scroll">
-					<a class="mui-control-item mui-active" href="#item1mobile">大额贷款</a>
-					<a class="mui-control-item" href="#item2mobile">小额贷款</a>
+					<script id="tab" type="text/html">
+							{{each data as value i}}
+								{{if i == 0}}
+									<a class="mui-control-item mui-active" href="#item{{++i}}mobile">
+										{{value.name}}
+									</a>
+								{{else}}
+									<a class="mui-control-item" href="#item{{++i}}mobile">
+										{{value.name}}
+									</a>
+								{{/if}}
+							{{/each}}
+					</script>
 				</div>
 			</div>
 			<div class="mui-slider-group">
@@ -26,31 +36,57 @@
 					<div id="scroll1" class="mui-scroll-wrapper">
 						<div class="mui-scroll">
 							<ul class="mui-table-view">
-								<script id="wholesale" type="text/template">
+								<script id="test" type="text/template">
 									{{each data as value i}}
-										<li class="mui-table-view-cell" onclick="toDetail('{{value.link}}',{{value.is_tag}})">
-											<div class="list_left">
-												<div class="logo fl">
-													<img src="{{value.logo}}" alt="">
+										<li class="mui-table-view-cell" onclick="toDetail('{{value.id}}')">
+											<div class="wire"></div>
+											<div class="control">
+												<div class="con_left">
+													<img src="{{value.cover}}" alt="">
 												</div>
-												<div class="left_text fl">
-													<p class="name">{{value.name}}</p>
-													<p class="money">{{value.min_amount / 10000}}~{{value.max_amount / 10000}}万</p>
+												<div class="con_right">
+													<p class="text">{{value.title}}</p>
+													<p class="item_box">
+														<span class="time">{{value.create_time}}</span>
+														<span class="name">{{value.author}}</span>
+													</p>
 												</div>
-											</div>
-											<div class="list_right">
-												<p>最快{{value.lending_time}}小时放款</p>
-												<p>贷款期限{{value.max_day / 30}}~{{value.min_day / 30}}月</p>
-												<p>月费用{{value.monthly_charge}}</p>
 											</div>
 										</li>
-									{{/each}}
+									{{/each}}	
 								</script>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item3mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item4mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item5mobile" class="mui-slider-item mui-control-content">
 					<div class="mui-scroll-wrapper">
 						<div class="mui-scroll">
 							<ul class="mui-table-view">
@@ -68,7 +104,7 @@
 	<script src="./resources/yredtbao/common/js/mui.pullToRefresh.material.js"></script>
 	<script src="./resources/yredtbao/common/js/template-web.js"></script>
 	<script src="./resources/yredtbao/common/js/common.js"></script>
-	<script src="./resources/yredtbao/js/indexnxt.js"></script>
+	<script src="./resources/yredtbao/js/commonSense.js"></script>
 	<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
 		<p></p>
 		<p></p>
