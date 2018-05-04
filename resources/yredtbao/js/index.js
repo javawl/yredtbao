@@ -5,7 +5,7 @@ $(function(){
         // 轮播图接口
         $.ajax({
             type: 'get',
-            url: portUrl + '/app/ads',
+            url: portUrl + '/app/ads?type=new',
             dataType: 'json',
             async: false,
             success: function (data) {

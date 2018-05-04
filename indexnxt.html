@@ -35,12 +35,12 @@
 												</div>
 												<div class="left_text fl">
 													<p class="name">{{value.name}}</p>
-													<p class="money">{{value.min_amount / 10000}}~{{value.max_amount / 10000}}万</p>
+													<p class="money">{{value.min_amount >= 10000? value.min_amount / 10000+'万' : value.min_amount}}~{{value.max_amount >= 10000? value.max_amount / 10000+'万' : value.max_amount}}</p>
 												</div>
 											</div>
 											<div class="list_right">
 												<p>最快{{value.lending_time}}小时放款</p>
-												<p>贷款期限{{value.max_day / 30}}~{{value.min_day / 30}}月</p>
+												<p>贷款期限{{value.min_day / 30}}~{{value.max_day / 30}}月</p>
 												<p>月费用{{value.monthly_charge}}</p>
 											</div>
 										</li>

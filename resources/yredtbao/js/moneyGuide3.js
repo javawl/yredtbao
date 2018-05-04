@@ -6,7 +6,7 @@ $(function () {
             var index = quesObj.index();
             if (quesObj.find('.active').length == quesObj.find('.box_select').length) {
                 //给所有box添加隐藏，当前点击的元素显示
-                var residence = $('.city').val();
+                var residence = $('#cityname').text();
                 var residenceTm = $('.time_city1 p[class="active"]').attr('name');
                 var hasHouseLoan = $('.time_city2 p[class="active"]').attr('name');
                 localStorage.setItem('residence', residence);

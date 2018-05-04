@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./resources/yredtbao/common/css/common.css">
+    <link rel="stylesheet" href="./resources/yredtbao/css/citysel.css">
     <link rel="stylesheet" href="./resources/yredtbao/css/moneyGuide.css">
 </head>
 
@@ -19,9 +20,18 @@
         <div class="box">
             <div class="box_select">
                 <p class="els">工作或居住城市</p>
-                <p class="box_city">
-                    <input class="city active" type="text" value="上海">
-                </p>
+                <div class="touchcity">
+                    <div class="schbox">
+                        <span>搜索城市:</span>
+                        <input id="cityipt" type="text">
+                    </div>
+                    <div class="citybox"></div>
+                    <div class="indexBar"></div>
+                    <a class="locate"></a>
+                </div>
+                <div id="citypick" class="active">
+                    <span id="cityname">上海</span>
+                </div>
             </div>
             <div class="box_select">
                 <p class="els">在该城市时间</p>
@@ -42,5 +52,7 @@
 </body>
 <script src="./resources/yredtbao/common/js/jquery.min.js"></script>
 <script src="./resources/yredtbao/js/moneyGuide3.js"></script>
+<script src="./resources/yredtbao/js/citypickerhc.js"></script>
+<script src="./resources/yredtbao/js/LAreaData1.js"></script>
 
 </html>

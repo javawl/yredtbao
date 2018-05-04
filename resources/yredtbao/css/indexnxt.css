@@ -167,7 +167,7 @@ html,
 
 		.mui-fullscreen .mui-segmented-control~.mui-slider-group {
 			top: 12vw;
-		    padding-top: 5vw;
+		    /* padding-top: 5vw; */
     		background: #fafafa;
 		}
 		
@@ -186,6 +186,7 @@ html,
 		}
 		.mui-table-view{
 			background-color: #fafafa !important;
+			padding-top: 5vw;
 		}
 		.tab_product {
 			width: 53.333vw;
@@ -198,7 +199,7 @@ html,
 			-webkit-box-sizing: border-box; 
 			-o-box-sizing: border-box; 
 			-ms-box-sizing: border-box; 
-			box-sizing: border-box; 
+			box-sizing: border-box;
 		}
 
 		.tab_product .wholesale,
@@ -221,9 +222,9 @@ html,
 		}
 
 		.list_left .logo {
-			width: 10.666vw;
-			height: 10.666vw;
-			margin: 3.8666vw 2.6666vw 0 3.8666vw;
+			width: 12vw;
+			height: 12vw;
+			margin: 3.8666vw 1.6666vw 0 2.8666vw;
 		}
 
 		.list_right {

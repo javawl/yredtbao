@@ -1,4 +1,4 @@
-var pageSize = 1;
+var pageSize = 10;
 var page = 1;
 (function ($) {
     $(document).ready(function () {
@@ -111,7 +111,7 @@ function ajaxPro(index, Id,page) {
     $.ajax({
         type: 'get',
         dataType: 'json',
-        url: portUrl + '/app/products/hotNew?page_size=1&page=' + page,
+        url: portUrl + '/app/products/hotNew?page_size='+ pageSize +'&page=' + page,
         success: function (data) {
             // 渲染数据
             if (index == 0){

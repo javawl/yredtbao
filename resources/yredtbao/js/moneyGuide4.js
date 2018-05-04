@@ -16,8 +16,8 @@ $(function () {
                 hasCar = $('.car p[class="active"]').attr('name');//是否有车
                 hasCarLoan = $('.CarLoan p[class="active"]').attr('name');//是否有车贷
 
+                console.log(residence)
                 var temp = webAppInterface.saveApplyInfo(phone, name, ageRange, hasCrdtCard, residence, residenceTm, hasHouseLoan, hasCar, hasCarLoan);
-            
                 webAppInterface.toGuidPage1(pageUrl + 'moneyGuide5.html','借钱向导')
             }
         })
