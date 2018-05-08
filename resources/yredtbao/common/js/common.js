@@ -25,6 +25,20 @@ $('.but').click(function () {
         }
     }
 })
+function ele() {
+    var bigArr, big;
+    $.ajax({
+        type: 'get',
+        url: portUrl + '/app/updateLog',
+        success: function (data) {
+            var obj = data.data[0].downloadUrl
+            $('.urlCli').click(function (e) {
+                window.location = obj
+                e.preventDefault();
+            })
+        }
+    })
+}
 var Validator = {
     name: function (name) {
 

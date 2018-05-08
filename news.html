@@ -7,28 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./resources/yredtbao/css/newsWeb.css">
+    <link rel="stylesheet" href="./resources/yredtbao/common/css/mui.min.css">
     <link rel="stylesheet" href="./resources/yredtbao/common/css/common.css">
 </head>
 
 <body>
-    <div id="content">
-        <!-- <div class="con_box">
-            <div class="clearfloat imgBox news">
-                <p class="fl f1">
-                    <span class="red"></span>
-                </p>
-                <div class="fl text_box">
-                    <p class="text_title">
-                        <span>5454</span>
-                        <span class="date">03-10</span>
-                    </p>
-                    <p class="con_text">每邀请1人最</p>
+    
+    <div class="mui-content">
+        <div id="slider" class="mui-slider mui-fullscreen">
+            <div class="mui-slider-group">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div id="content">
+                            <script type="text/template" id="test">
+                                {{each data as value i}}
+                                    <div class="con_box">
+                                        <div name="{{value.id}}" tt="{{value.msgTp}}" class="clearfloat imgBox news{{i}}">
+                                            <p class="fl f1">
+                                                <span class=""></span>
+                                            </p>
+                                            <div class="fl text_box">
+                                                <p class="text_title">
+                                                    <span>{{value.title}}</span>
+                                                    <span class="date">{{value.sndTm}}</span>
+                                                </p>
+                                                <p class="con_text">{{#value.content}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </script>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </body>
 <script src="./resources/yredtbao/common/js/jquery.min.js"></script>
+<script src="./resources/yredtbao/common/js/mui.min.js"></script>
+<script src="./resources/yredtbao/common/js/mui.pullToRefresh.js"></script>
+<script src="./resources/yredtbao/common/js/mui.pullToRefresh.material.js"></script>
+<script src="./resources/yredtbao/common/js/template-web.js"></script>
 <script src="./resources/yredtbao/common/js/common.js"></script>
 <script src="./resources/yredtbao/js/news.js"></script>
 </html>

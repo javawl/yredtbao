@@ -11,9 +11,31 @@
 <body>
    <div id="content">
         <div class="img_logo"><img src="./resources/yredtbao/images/wallpaper.png" alt=""></div>
-        <div class="img_android"><img src="./resources/yredtbao/images/android.png" alt=""></div>
+        <div class="img_android"><img class="urlCli" src="./resources/yredtbao/images/android.png" alt=""></div>
         <div class="img_iphone"><img src="./resources/yredtbao/images/iphone.png" alt=""></div>
         <div class="img_banner"><img src="./resources/yredtbao/images/banner.png" alt=""></div>
     </div> 
 </body>
+<script src="./resources/yredtbao/common/js/jquery.min.js"></script>
+<script src="./resources/yredtbao/common/js/common.js"></script>
+<script>
+    function ele(){
+        var bigArr, big;
+        $.ajax({
+            type: 'get',
+            url: portUrl + '/app/updateLog',
+            success: function(data){
+                var obj = data.data[0].downloadUrl
+                $('.urlCli').click(function(e) {
+                    e.preventDefault();
+                    window.location = obj
+                })
+            }
+        })
+    }
+    ele()
+    $('img').click(function(e){
+        e.preventDefault();
+    })
+</script>
 </html>

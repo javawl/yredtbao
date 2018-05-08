@@ -17,7 +17,6 @@
 .img_iphone img,.img_banner img,.img_android img{
     width: 100%;
     height: 100%;
-    display: block;
 }
 .img_logo img{
     height: 100%;
