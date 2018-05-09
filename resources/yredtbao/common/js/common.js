@@ -1,30 +1,31 @@
-var reg = /^[0-9a-zA-Z_\u3E00-\u9FA5]{3,15}$/;//4-16字节，允许字母数字下划线
-var portUrl = 'http://47.100.105.193';
-var pageUrl = 'http://106.14.94.52/work/yredtbao/'
+﻿var reg = /^[0-9a-zA-Z_\u3E00-\u9FA5]{3,15}$/;//4-16字节，允许字母数字下划线
+//var portUrl = 'http://47.100.105.193';
+var portUrl = 'http://www.yrmoney.cn';
+var pageUrl = portUrl + '/yredtbao/'
 //模态框
 function modelYn(text) {
     window.setTimeout(function () {
-        $('.model').fadeOut()      
+        $('.model').fadeOut()
     }, 1000)
 }
 // 验证码接口
-$('.but').click(function () {
-    phone = $('#phone').val();
-    // 手机
-    if (Validator.tel(phone) != false) {
-        var a = webAppInterface.getKaptchCd(phone, 1)
-        if (a == '000000') {
-            settime(this);
-            $('.model').css('display', 'block');
-            $('.model .text_notice').text('验证码已发送')
-            modelYn()
-        } else {
-            $('.model').css('display', 'block');
-            $('.model .text_notice').text(a)
-            modelYn()
-        }
-    }
-})
+// $('.but').click(function () {
+//     phone = $('#phone').val();
+//     // 手机
+//     if (Validator.tel(phone) != false) {
+//         var a = webAppInterface.getKaptchCd(phone, 1)
+//         if (a == '000000') {
+//             settime(this);
+//             $('.model').css('display', 'block');
+//             $('.model .text_notice').text('验证码已发送')
+//             modelYn()
+//         } else {
+//             $('.model').css('display', 'block');
+//             $('.model .text_notice').text(a)
+//             modelYn()
+//         }
+//     }
+// })
 function ele() {
     var bigArr, big;
     $.ajax({
@@ -123,8 +124,8 @@ function validata(username, phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('请输入您的验证码');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }
     // 密码
     if (password == "" || password == null) {
@@ -132,15 +133,15 @@ function validata(username, phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('请输入新密码');
             modelYn();
-            return false;
         }, 350);
+        return false;
     } else if (!reg.test(password)) {
         setTimeout(function () {
             $('.model').fadeIn();
             $('.model .text_notice').text('您输入的密码格式错误');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }
 
     if (password_1 == "" || password_1 == null) {
@@ -148,15 +149,15 @@ function validata(username, phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('请再次输入新密码');
             modelYn();
-            return false;
         }, 350);
+        return false;
     } else if (!reg.test(password_1)) {
         setTimeout(function () {
             $('.model').fadeIn();
             $('.model .text_notice').text('您输入的密码格式错误');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }
 
     if (password != password_1) {
@@ -164,8 +165,8 @@ function validata(username, phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('您输入的密码不一致');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }else{
         return true;
     }
@@ -182,8 +183,8 @@ function validata_1( phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('请输入您的验证码');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }
     // 密码
     if (password == "" || password == null) {
@@ -191,15 +192,15 @@ function validata_1( phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('请输入新密码');
             modelYn();
-            return false;
         }, 350);
+        return false;
     } else if (!reg.test(password)) {
         setTimeout(function () {
             $('.model').fadeIn();
             $('.model .text_notice').text('您输入的密码格式错误');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }
 
     if (password_1 == "" || password_1 == null) {
@@ -207,15 +208,15 @@ function validata_1( phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('请再次输入新密码');
             modelYn();
-            return false;
         }, 350);
+        return false;
     } else if (!reg.test(password_1)) {
         setTimeout(function () {
             $('.model').fadeIn();
             $('.model .text_notice').text('您输入的密码格式错误');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }
 
     if (password != password_1) {
@@ -223,8 +224,8 @@ function validata_1( phone, valiWid, password, password_1) {
             $('.model').fadeIn();
             $('.model .text_notice').text('您输入的密码不一致');
             modelYn();
-            return false;
         }, 350);
+        return false;
     }else{
         return true;
     }

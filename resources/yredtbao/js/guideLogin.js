@@ -1,11 +1,9 @@
-$(function(){
+$(function () {
     var phone,
         valiWid,
         username;
-
-    isLogin();
     // 判断是否登录
-    function isLogin(){
+    function isLogin() {
         var loginStatus = webAppInterface.isLogin();
         if (loginStatus != "false") {
             // 获取json字符串并转义
@@ -15,9 +13,31 @@ $(function(){
             $('.validata_box').addClass('hide');
         }
     }
-
+    isLogin();
+    // 验证码接口
+    $('.but').click(function () {
+        phone = $('#phone').val();
+        // 手机
+        if (Validator.tel(phone) != false) {
+            var a = webAppInterface.getKaptchCd(phone, 1)
+            if (a == '000000') {
+                settime(this);
+                $('.model').css('display', 'block');
+                $('.model .text_notice').text('验证码已发送')
+                modelYn()
+            } else if(a == '该号码已注册'){
+                $('.model').css('display', 'block');
+                $('.model .text_notice').text('已注册，请先登录')
+                modelYn()
+            }else{
+                $('.model').css('display', 'block');
+                $('.model .text_notice').text(a)
+                modelYn()
+            }
+        }
+    })
     // 下一步
-    $('.button_box').click(function(){
+    $('.button_box').click(function () {
         var temp = '000000';
         username = $('#id_name').val();
         phone = $('#phone').val();
@@ -34,7 +54,7 @@ $(function(){
         } else {
             return;
         }
-        if (!$('.validata_box').hasClass('hide')){
+        if (!$('.validata_box').hasClass('hide')) {
             if (valiWid == "" || valiWid == null) {
                 $('.model').fadeIn();
                 $('.model .text_notice').text('请输入您的验证码');
@@ -43,10 +63,9 @@ $(function(){
             }
             temp = webAppInterface.isVerify(phone, username, valiWid);
         }
-        
-        if (temp == '000000'){
+        if (temp == '000000') {
             location.href = './moneyGuide.html'
-        }else{
+        } else {
             $('.model').fadeIn();
             $('.model .text_notice').text('验证码错误');
             modelYn();

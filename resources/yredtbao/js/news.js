@@ -19,7 +19,7 @@ var phone = ps.phone,
     pageSize = 10,
     city = decodeURI(ps.city),
     ArrStr = redArrStr.split('.');
-page = 1;
+    page = 1;
 
 (function ($) {
     $(document).ready(function () {
@@ -38,13 +38,13 @@ page = 1;
                 success: function (data) {
                     if (data.data.length == 0) {
                         $('#content').html('<div class="as"><p>目前暂无消息</p></div>')
-                        $('.mui-pull-bottom-tips').hide();
+                         $('.mui-pull-bottom-tips').hide();
                         return;
                     }
                     var html = template('test', data);
                     $('#content').append(html);
-                    for (var i = 0; i < ArrStr.length; i++) {
-                        if (dataArray[i].id == ArrStr[i]) {
+                    for (var j = 0; j < ArrStr.length; j++) {
+                        if (dataArray[i].id == ArrStr[j]) {
                             $('.news' + i + ' .f1').find("span").addClass('red')
                             $('.news' + i).click(function () {
                                 var tp = 'Y';
@@ -125,7 +125,6 @@ function ajaxSL() {
         }
     })
 }
-//小程序 公众号 js基础 vue webpack 
 // 公用请求数据
 function ajaxPro(index, Id, page) {
     // 请求tab栏下面‘全部’的数据
